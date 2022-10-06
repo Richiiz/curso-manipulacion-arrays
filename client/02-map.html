@@ -9,15 +9,16 @@
 <body>
     <div id="app"></div>
     <script>
-        const products =[
-            {title: 'burger', price: 121},
-            {title: 'pizza', price: 20},
+        const personas =[
+            {name: 'burger', lastname: 'chop', age: 21},
+            {name: 'burgir', lastname: 'chip', age: 20},
         ];
         const app = document.getElementById('app');
         console.log(app)
-        products.forEach(p => {
-            app.innerHTML += `<li>${p.title} - ${p.price}</li>`;
+        const lis = personas.map(p => {
+            return `<li>${p.name}</li>`;
         })
+        app.innerHTML = lis.join('');
     </script>
 </body>
 </html>
