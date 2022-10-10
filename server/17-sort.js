@@ -38,3 +38,6 @@ const orders = [
         delivered: true,
     },
 ];
+
+orders.sort((a,b) => b.total - a.total);
+console.log(orders);
